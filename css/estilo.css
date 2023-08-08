@@ -12,46 +12,12 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-
-.menu__nav{
-    position: sticky;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
-.logo{
-    display: flex;
+.logo_1{
     width: 150px;
-    height: 150px;
 }
-.logo-img{
-    height: 100px;
-    display: flex;
-    margin-right: 15px;
-    margin-left: 25px;
+.fondo{
+    background-color: rgb(243, 243, 243);
 }
-
-a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-    font-size: 20px;
-}
-
-.menu li{
-    display: inline-block;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-
-}
-.menu li a{
-    text-decoration: none;
-    display: inline-block;
-    color: black;
-}
-
 .principal {
     display: block;
     border: solid 10px black;
@@ -60,9 +26,6 @@ a{
     padding: 5px;
 
 }
-
-
-
 .tituloropa{
     font-size: 100px;
     text-align: center;
@@ -116,7 +79,6 @@ a{
 .parrafo_nosotros{
     margin: 70px auto;
     font-size: 30px;
-   
 }
 
 .remeras{
@@ -127,7 +89,19 @@ a{
 .contenedor__ropa{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 100px;
+    gap: 100px; 
+}
+@media (max-width: 1238px){
+    .contenedor__ropa{
+        grid-template-columns: repeat(2,1fr);
+        gap: 100px; 
+    }
+}
+@media (max-width: 800px){
+    .contenedor__ropa{
+        grid-template-columns: repeat(1,1fr);
+        gap: 100px; 
+    }
 }
 .ropa{
     display: flex;
@@ -202,7 +176,8 @@ a{
 .form{
     background-color: rgb(243, 243, 243);
     margin-top: 40px;
-    margin: 20px;
+    margin: 0 auto;
+    max-width: 500px;
 }
 .label {
     display: block;
@@ -230,6 +205,52 @@ a{
     
     font-size: 250%;
 }
+.container__2{
+    width: 100%;
+    display: flex;
+    max-width: 1300px;
+}
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+.card img{
+    width: 100%;
+    height: 350px;
+}
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.card .contenido a{
+    text-decoration: none;
+    display: inline block;
+    margin-top: 20px;
+    color: blue;
+    border: 1px solid blue;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.card .contenido a:hover{
+    background-color: blue;
+    color: white;
+}
+
+
 
 
 
@@ -291,4 +312,3 @@ footer{
     height:  1px;
     background-color: #7a7a7a;
 }
-
