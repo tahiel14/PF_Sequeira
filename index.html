@@ -11,7 +11,7 @@
             integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
             crossorigin="anonymous"     
         />
-        
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/estilo.css" />
     </head>
 
@@ -105,6 +105,24 @@
                 >
                     <span class="visually-hidden">Next</span>
                 </button>
+                <div class="container">
+                    <figure>
+                        <img src="./img/casual__1.jpg" alt="casual">
+                        <div class="capa">
+                            <h3>Clasico</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quidem omnis debitis, voluptatem eaque dolores eos molestias? Nihil iste, harum corrupti, beatae eum quisquam sed assumenda officia ipsum culpa eius.</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="container">
+                    <figure>
+                        <img src="./img/eleganteee__1.jpg" alt="casual">
+                        <div class="capa">
+                            <h3>Elegante</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quidem omnis debitis, voluptatem eaque dolores eos molestias? Nihil iste, harum corrupti, beatae eum quisquam sed assumenda officia ipsum culpa eius.</p>
+                        </div>
+                    </figure>
+                </div>
 
                 <h1 class="Nuestros_Modelos">Nuestros Modelos</h1>
                 <section class="modelo__section">
@@ -112,39 +130,34 @@
                         <h2>Jason Will</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quae provident sit at totam unde cum laudantium expedita eos maxime assumenda, delectus quaerat dolores, voluptates beatae illum libero exercitationem sunt!</p>
                     </div>
-                    <img src="./img/modelo__1.jpg" alt="modelo">
+                    <img data-aos="flip-right" src="./img/modelo__1.jpg" alt="modelo">
                 </section>
                 <section class="modelo__section_2">
                     <div class="modelo__div">
                         <h2>Marcus</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quae provident sit at totam unde cum laudantium expedita eos maxime assumenda, delectus quaerat dolores, voluptates beatae illum libero exercitationem sunt!</p>
                     </div>
-                    <img src="./img/modelo__2.jpg" alt="modelo">
+                    <img data-aos="flip-right" src="./img/modelo__2.jpg" alt="modelo">
                 </section>
                 <section class="modelo__section">
                     <div class="modelo__div">
                         <h2>Cameron</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quae provident sit at totam unde cum laudantium expedita eos maxime assumenda, delectus quaerat dolores, voluptates beatae illum libero exercitationem sunt!</p>
                     </div>
-                    <img src="./img/modelo__3.jpg" alt="modelo">
+                    <img data-aos="flip-right" src="./img/modelo__3.jpg" alt="modelo">
                 </section>
                 <section class="modelo__section_2">
                     <div class="modelo__div">
                         <h2>Antoneo</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quae provident sit at totam unde cum laudantium expedita eos maxime assumenda, delectus quaerat dolores, voluptates beatae illum libero exercitationem sunt!</p>
                     </div>
-                    <img src="./img/modelo__4.jpg" alt="modelo">
+                    <img data-aos="flip-right" src="./img/modelo__4.jpg" alt="modelo">
                 </section>
                 <img
                     src="img/presentacion.jpg"
                     alt="Ropa elegante"
                     class="principal"
                 />
-            </div>
-            <div>
-                <ul>
-                    <i class="bi bi-facebook"></i>
-                </ul>
             </div>
         </main>
         <footer>
@@ -199,5 +212,9 @@
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
             crossorigin="anonymous"
         ></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
     </body>
 </html>
