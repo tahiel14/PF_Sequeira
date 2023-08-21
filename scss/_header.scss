@@ -1,0 +1,20 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(243, 242, 242);
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.fondo {
+		background-color: rgb(243, 243, 243);
+	}
+}
+.logo_1 {
+	width: 150px;
+}

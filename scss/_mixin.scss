@@ -1,0 +1,48 @@
+@mixin ropa($size, $alineacion, $color, $t_decoration){
+    font-size: $size;
+    text-align: $alineacion;
+    color: $color;
+    text-decoration: $t_decoration;
+}
+.precio__elegantee{
+    @include ropa(1rem, center, rgb(16, 16, 16), line-through)
+}
+
+@mixin ropa_promo($size, $alineacion, $weight, $color){
+    font-size: $size;
+    text-align: $alineacion;
+    font-weight: $weight;
+    color: $color;
+}
+.precioelegante__promo{
+    @include ropa_promo(2.5rem, center, bold, rgb(244, 9, 9))
+}
+
+@mixin parrafo($margin, $size, $color){
+    margin: $margin;
+    font-size: $size;
+    color: $color;
+}
+.parrafo_nosotros{
+    @include parrafo(70px auto, 30px, rgb(16, 16, 16) )
+}
+
+@mixin titulo_r($size, $alineacion, $border, $border_r, $padding){
+    font-size: $size;
+    text-align: $alineacion;
+    border: $border;
+    border-radius: $border_r;
+    padding: $padding;
+}
+.tituloropa{
+    @include titulo_r(450px, center, solid 10px rgb(1, 1, 1), 40px, 70px)
+}
+
+@mixin promo($animation_n, $animation_d, $animation_i_c){
+   animation-name: $animation_n;
+   animation-duration: $animation_d;
+   animation-iteration-count: $animation_i_c;
+}
+.subtitulo__promo{
+    @include promo(texto, 5s, infinite)
+}
