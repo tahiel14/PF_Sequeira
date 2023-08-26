@@ -8,9 +8,12 @@ body{
     background-color: rgb(243, 242, 242);
 }
 header {
-	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	left: 0;
+    top: 0;
+    width: 100%;
+
 	.fondo {
 		background-color: rgb(243, 243, 243);
 	}

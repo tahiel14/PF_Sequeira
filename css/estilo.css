@@ -43,9 +43,11 @@ body {
 }
 
 header {
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 header .fondo {
   background-color: rgb(243, 243, 243);
@@ -61,11 +63,11 @@ header .fondo {
 }
 
 .container {
-  width: 100%;
   display: flex;
+  margin: 5rem auto;
+  gap: 5rem;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .container figure {
@@ -124,20 +126,29 @@ header .fondo {
 }
 
 .Nuestros_Modelos {
+  font-family: "Arvo", serif;
   text-align: center;
   font-size: 60px;
   margin-top: 30px;
+  margin-bottom: 7rem;
+}
+
+.modelo_section {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .modelo__section {
   background: linear-gradient(to left, rgb(145, 145, 145), rgb(0, 0, 0));
   display: flex;
-  justify-content: space-between;
+  justify-self: flex-start;
   padding: 30px;
-  width: 50%;
-  margin: auto 100px;
-  margin-top: 50px;
+  width: 71%;
   border-radius: 20px;
+  margin-bottom: 5rem;
   box-shadow: 10px 10px 10px rgb(0, 0, 0);
 }
 
@@ -148,23 +159,23 @@ header .fondo {
 
 .modelo__section h2 {
   margin: 0;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .modelo__section p {
-  color: aliceblue;
+  color: rgb(243, 249, 255);
   margin-right: 15px;
+  font-size: 25px;
 }
 
 .modelo__section_2 {
   background: linear-gradient(to left, rgb(145, 145, 145), rgb(0, 0, 0));
   display: flex;
-  justify-content: space-between;
+  justify-self: flex-end;
   padding: 30px;
-  width: 50%;
-  margin: auto 550px;
-  margin-top: 50px;
+  width: 71%;
   border-radius: 20px;
+  margin-bottom: 5rem;
   box-shadow: 10px 10px 10px rgb(0, 0, 0);
 }
 
@@ -181,39 +192,53 @@ header .fondo {
 .modelo__section_2 p {
   color: aliceblue;
   margin-right: 15px;
+  font-size: 25px;
 }
 
 @media (max-width: 800px) {
-  .modelo__section_2 {
+  .container {
+    display: grid;
+    margin: 5rem auto;
+  }
+  .container figure {
+    position: relative;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  .container figure img {
+    max-width: 400px;
+    transition: all 500ms ease-out;
+  }
+  .modelo__section {
     background-color: #7a7a7a;
     display: block;
-    justify-content: space-between;
     padding: 30px;
-    width: 400px;
+    max-width: 400px;
     margin: auto;
     margin-top: 50px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgb(0, 0, 0);
   }
-  .modelo__section {
-    background-color: #7a7a7a;
+  .modelo__section_2 {
+    background: linear-gradient(to left, rgb(145, 145, 145), rgb(0, 0, 0));
     display: block;
-    justify-content: space-between;
     padding: 30px;
-    width: 400px;
+    max-width: 400px;
     margin: auto;
     margin-top: 50px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgb(0, 0, 0);
   }
   .principal {
-    display: block;
     border: solid 10px black;
     border-radius: 100px;
     margin: 70px auto;
     padding: 5px;
-    height: 500px;
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
   }
 }
 .principal {
@@ -225,6 +250,7 @@ header .fondo {
 }
 
 .tituloropa {
+  font-family: "Arvo", serif;
   font-size: 100px;
   text-align: center;
   border: solid 10px rgb(243, 243, 243);
@@ -233,6 +259,7 @@ header .fondo {
 }
 
 .subtitulo {
+  font-family: "Arvo", serif;
   color: white;
   background-color: rgb(110, 104, 104);
   display: block;
@@ -257,6 +284,12 @@ header .fondo {
   }
 }
 @media (max-width: 800px) {
+  .tituloropa {
+    font-size: 45px;
+    text-align: center;
+    border: solid 10px rgb(243, 243, 243);
+    border-radius: 40px;
+  }
   .contenedor__ropa {
     grid-template-columns: repeat(1, 1fr);
     gap: 100px;
@@ -340,19 +373,38 @@ header .fondo {
 }
 
 .cuotas {
-  color: red;
+  font-family: "Arvo", serif;
+  color: rgb(252, 4, 4);
   text-align: center;
   text-transform: uppercase;
   font-size: 50px;
   border: solid 10px black;
   border-radius: 10px;
-  margin: 150px;
+  max-width: 1200px;
+  margin: 4rem auto;
   padding: 5px;
+}
+
+.stock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.stock .stock_img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+.stock .stock_img .stock__p {
+  font-size: 20px;
 }
 
 @media (max-width: 800px) {
   .cuotas {
-    background-color: white;
+    font-family: "Arvo", serif;
+    background-color: rgb(243, 242, 243);
     text-align: center;
     text-transform: uppercase;
     font-size: 20px;
@@ -360,23 +412,40 @@ header .fondo {
     margin: 25px;
     padding: 5px;
   }
+  .stock {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 1rem;
+  }
+  .stock .stock_img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    justify-self: center;
+  }
+  .stock .stock_img .stock__p {
+    font-size: 20px;
+  }
 }
 .subtitulo__promo {
-  color: white;
+  font-family: "Arvo", serif;
+  color: rgb(0, 0, 0);
   background-color: rgb(106, 105, 105);
   display: block;
   text-align: center;
   margin: 10px;
   padding: 10px;
   font-size: 250%;
-  margin-bottom: 150px;
+  margin-bottom: 45px;
 }
 
 .contenedor__ropa2 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: 65px;
+  justify-content: center;
 }
 .contenedor__ropa2 .ropaas__2 {
   display: flex;
@@ -441,6 +510,7 @@ header .fondo {
   }
 }
 .ayuda {
+  font-family: "Arvo", serif;
   text-align: center;
   display: block;
   margin: 60px auto;
@@ -483,6 +553,11 @@ header .fondo {
   margin-bottom: 10px;
 }
 
+@media (max-width: 800px) {
+  .formulario {
+    padding: 1rem;
+  }
+}
 .nosotros {
   display: flex;
   justify-content: center;
@@ -495,6 +570,7 @@ header .fondo {
   margin-top: 10px;
 }
 .nosotros .logo_nosotros img .parrafo_nosotros {
+  font-family: "Arvo", serif;
   margin: 70px auto;
   font-size: 50px;
 }
@@ -507,12 +583,12 @@ header .fondo {
     margin: auto;
   }
   .parrafo_nosotros {
+    font-family: "Arvo", serif;
     margin: 5px;
     font-size: 20px;
   }
   .logo_nosotros {
     height: 350px;
-    margin-left: 50px;
   }
 }
 .container__2 {
@@ -525,21 +601,8 @@ header .fondo {
   gap: 100px;
 }
 
-@media (max-width: 1238px) {
-  .container__2 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 100px;
-  }
-}
-@media (max-width: 800px) {
-  .container__2 {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 100px;
-  }
-}
 .card {
   width: 100%;
-  margin: 20px;
   border-radius: 6px;
   overflow: hidden;
   background-color: white;
@@ -567,18 +630,19 @@ header .fondo {
   text-decoration: none;
   display: inline block;
   margin-top: 20px;
-  color: blue;
-  border: 1px solid blue;
+  color: rgb(2, 2, 245);
+  border: 1px solid rgb(2, 2, 245);
   border-radius: 15px;
   transition: all 400ms ease;
   padding: 10px;
 }
 .card .contenido a:hover {
-  background-color: blue;
+  background-color: rgb(2, 2, 245);
   color: white;
 }
 
 .subtitulo__2 {
+  font-family: "Arvo", serif;
   color: black;
   display: block;
   text-align: center;
@@ -609,6 +673,48 @@ header .fondo {
   margin-top: 20px;
 }
 
+@media (max-width: 1238px) {
+  .container__2 {
+    width: 100%;
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+  .container__2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+  }
+  .roow {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .container__2 {
+    width: 100%;
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+  .container__2 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 100px;
+  }
+  .roow {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr;
+  }
+}
 footer {
   width: 100%;
   background-color: rgb(146, 143, 143);
